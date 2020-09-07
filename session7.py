@@ -37,21 +37,16 @@ def check_swear_words(text):
 def add_even_reduce(numbers):
   return reduce(lambda x, y: x + y if not y % 2 else x, numbers, 0)
 
-# ****************************************************************
 # def biggest_char(text):
 #   print([ord(letter) - ord('a') for letter in text])
-#   return reduce(lambda index:string.ascii_letters[index % len(string.ascii_letters)] if x > y else 0, [ord(letter) - ord('a') for letter in text])
+#   return reduce(lambda index:string.ascii_letters[index % len(string.ascii_letters)] if x > y else 0)
 
-# text = 'ba'
-# print(biggest_char(text))
+def biggest_char(test:str)->str:
+    '''Outputs the biggest char in the string provided'''
+    return reduce(lambda x,y: max(x,y), test)
 
-# def add_third_num(numbers):
-#   return reduce(lambda x, y: numbers[x]+numbers[y] if x % 3 else y, enumerate(len(numbers)+1), 0) # if y % 3 else x
-
-# numbers = [1,2,3,4,5,6]
-# print(add_third_num(numbers))
-
-# ****************************************************************
+def add_third_num(numbers):
+  return reduce(lambda x, y: x+y, numbers[3::3])
 
 def rand_rto():
   RTO = ['KA'+str(random.randint(10, 99))+'JB'+str(random.randint(1000, 9999)) for _ in range(15)]

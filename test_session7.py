@@ -76,3 +76,15 @@ def test_partial_rto():
     state = 'DL'
     partial_rto(state) == 15, "generate 15 state wise random vehicle registration num"
 
+def test_add_third_num():
+    numbers = [1,2,3,4,5,6]
+    assert add_third_num(numbers) == 4, "add only 3 index element"
+
+def test_add_third_num2():
+    numbers = [1,2,3,4,5,6,7,8,9,10]
+    assert add_third_num(numbers) == 21, "add only 3 index element"
+
+def test_biggest_char():
+    text = 'ba'
+    assert biggest_char(text) == "b", "find biggest char"
+
